@@ -1,10 +1,10 @@
 fn main() {
-    let p = Package {
-        pkgname: "testtest".to_string(),
-        pkgver: "0.1.0".to_string(),
-        pkgrel: "1".to_string(),
-        pkgdesc: "this package do nothig".to_string(),
-    };
+    let p = Package::new(
+        "testtest".to_string(),
+        "0.1.0".to_string(),
+        "1".to_string(),
+        "this package do nothig".to_string(),
+    );
     println!("Hello, {:?}!", p);
 }
 
@@ -15,4 +15,15 @@ struct Package {
     pkgver: String,
     pkgrel: String,
     pkgdesc: String,
+}
+
+impl Package {
+    fn new(pkgname: String, pkgver: String, pkgrel: String, pkgdesc: String) -> Self {
+        Package {
+            pkgname,
+            pkgver,
+            pkgrel,
+            pkgdesc,
+        }
+    }
 }
