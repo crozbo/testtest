@@ -3,6 +3,7 @@ fn main() {
         pkgname: "testtest".to_string(),
         pkgver: "0.1.0".to_string(),
         pkgrel: "1".to_string(),
+        pkgdesc: "this package do nothig".to_string(),
     };
     println!("Hello, {:?}!", p);
 }
@@ -13,4 +14,5 @@ struct Package {
     pkgname: String,
     pkgver: String,
     pkgrel: String,
+    pkgdesc: String,
 }
